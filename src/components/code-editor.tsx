@@ -1,4 +1,4 @@
-import MonacoEditor, { EditorDidMount, monaco } from "@monaco-editor/react";
+import MonacoEditor, { EditorDidMount } from "@monaco-editor/react";
 import { useRef } from "react";
 import prettier from "prettier";
 import parser from "prettier/parser-babel";
