@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import CodeEditor from "./code-editor";
 import bundle from "../bundler";
 import Resizable from "./resizable";
-import Preview from "./prew";
+import Preview from "./prewiew";
 
 const CodeCell = () => {
   const [code, setCode] = useState("");
@@ -24,7 +24,19 @@ const CodeCell = () => {
       <div style={{ height: "100%", display: "flex", flexDirection: "row" }}>
         <Resizable direction="horizontal">
           <CodeEditor
-            initialValue="console.log('hello world!');"
+            initialValue="import ReactDOM from 'react-dom';
+            
+            import React from 'react';
+            
+            const App = () => {
+              return (
+                <div>
+                  <h1>hello world</h1>
+                </div>
+              );
+            };
+            
+            ReactDOM.render(<App />, document.querySelector('#root'));"
             onChange={(value) => setInput(value)}
           />
         </Resizable>
